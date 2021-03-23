@@ -1,0 +1,9 @@
+version: '3.1'
+services:
+  beammp:
+    image: 05de56cac0ad79/beammp-server
+    container_name: beammp
+    restart: unless-stopped
+    volumes:
+      - ./cfg:/app/
+    network_mode: "host"
