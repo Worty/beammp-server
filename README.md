@@ -16,6 +16,7 @@ services:
     image: 05de56cac0ad79/beammp-server
     container_name: beammp
     restart: unless-stopped
+    tty: true
     volumes:
       - ./cfg:/app/
     network_mode: "host"
