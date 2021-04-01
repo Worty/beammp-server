@@ -1,5 +1,5 @@
 from debian:buster-slim
-ARG beammp=v2.0.1
+ARG beammp=v2.0.2
 
 RUN apt-get -y update && apt-get -y upgrade
 RUN apt-get -y install wget liblua5.3 rapidjson-dev libcurl4-openssl-dev ca-certificates --no-install-recommends && apt-get -y clean
