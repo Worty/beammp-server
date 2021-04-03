@@ -2,10 +2,11 @@ from debian:buster-slim
 ARG beammp=v2.0.2
 
 RUN apt-get -y update && apt-get -y upgrade
-RUN apt-get -y install wget liblua5.3 rapidjson-dev libcurl4-openssl-dev ca-certificates --no-install-recommends && apt-get -y clean
+RUN apt-get -y install liblua5.3 libssl-dev --no-install-recommends && apt-get -y clean
 
 WORKDIR /BeamMP-Server
-RUN wget https://github.com/BeamMP/BeamMP-Server/releases/download/$beammp/BeamMP-Server-linux -O BeamMP-Server && chmod +x BeamMP-Server
+ADD https://github.com/BeamMP/BeamMP-Server/releases/download/$beammp/BeamMP-Server-linux ./BeamMP-Server 
+RUN chmod +x BeamMP-Server
 
 WORKDIR /app
 CMD /BeamMP-Server/BeamMP-Server
