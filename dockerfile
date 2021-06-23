@@ -1,5 +1,5 @@
 from debian:buster-slim
-ARG beammp=v2.0.3
+ARG beammp=v2.1.0
 
 RUN apt-get -y update && apt-get -y upgrade
 RUN apt-get -y install liblua5.3 libssl-dev --no-install-recommends && apt-get -y clean
