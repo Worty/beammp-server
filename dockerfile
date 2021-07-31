@@ -2,7 +2,7 @@ FROM alpine:latest as build
 RUN apk update && apk --no-cache upgrade
 RUN apk add --no-cache lua5.3 libgcc
 RUN apk add --no-cache git make cmake g++ lua5.3-dev zlib-dev rapidjson-dev openssl-dev boost-dev
-ARG beammp=v2.1.4
+ARG beammp=v2.2.0
 ARG BUILD_TYPE=Release
 
 
