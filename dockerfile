@@ -1,4 +1,4 @@
-from debian:buster-slim
+FROM debian:buster-slim
 ARG beammp=v2.1.4
 
 RUN apt-get -y update && apt-get -y upgrade
@@ -11,4 +11,3 @@ RUN chmod +x BeamMP-Server
 WORKDIR /app
 CMD /BeamMP-Server/BeamMP-Server
 EXPOSE 30814
-
