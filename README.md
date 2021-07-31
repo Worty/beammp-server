@@ -1,11 +1,11 @@
 # Dockerfile for BeamMP-Server
-[Dockerhub](https://hub.docker.com/r/05de56cac0ad79/beammp-server)
+[Github pkgs](https://github.com/Worty/beammp-server-docker/pkgs/container/beammp-server)
 
 On first start Server.cfg will be generated in /app
 
 Run example:
 ```
-docker run --rm --network=host -v $(pwd)/cfg:/app 05de56cac0ad79/beammp-server
+docker run --rm --network=host -v $(pwd)/cfg:/app ghcr.io/worty/beammp-server:latest
 ```
 
 docker-compose.yml example:
@@ -13,7 +13,7 @@ docker-compose.yml example:
 version: '3.1'
 services:
   beammp:
-    image: 05de56cac0ad79/beammp-server
+    image: ghcr.io/worty/beammp-server:latest
     container_name: beammp
     restart: unless-stopped
     environment:
